@@ -1,0 +1,33 @@
+server:
+  port: 8081
+  servlet:
+    contextPath: /api
+
+spring:
+  application:
+    name: customer
+
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+
+  datasource:
+    url: jdbc:mysql://database-1.ctpf6jkd7yhu.ap-southeast-1.rds.amazonaws.com/customer
+    username: admin
+    password: 12345678
+
+  security:
+    user:
+      name: administrator
+      password: password
+      roles: ADMIN
+
+  loan:
+    host: http://localhost:8082/api/loan
+    endpoint:
+      getInfo: info
+
+restTemplate:
+  connectionTimeOut: 5000
+  readTimeOut: 10000
