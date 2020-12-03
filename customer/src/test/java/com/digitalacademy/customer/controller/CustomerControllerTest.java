@@ -143,7 +143,7 @@ public class CustomerControllerTest {
         assertEquals(10,jsonObject.get("age"));
     }
 
-    @DisplayName("Test create customer with firstname empty") //----------------------- not pass
+    @DisplayName("Test create customer with firstname empty") 
     @Test
     void testCreateCustomerWithNameEmpty() throws Exception{
         Customer customerReq = CustomerSupportTest.getCreateCustomer();
